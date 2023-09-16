@@ -12,11 +12,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+      
+    
 
-    <link rel="stylesheet" href="./style.css" />
+    <script src="./js/global.js" defer></script>
+    <script src="./js/script.js" type="module"></script>
 
-    <script src="./js/global.js" defer ></script>
-    <script src="./js/script.js" type="module" ></script>
 </head>
 <body>
     <header class="header">
@@ -30,19 +31,19 @@
                     aria-label="search movies" 
                     placeholder="find your movies.." 
                     class="search-field" autocomplete="off"  search-field />
-                <img src="./images/search.png" alt="" width="24" height="24" alt="search"  class ="leading-icon" />
+                <img src="./images/search.png" alt="search" width="24" height="24" class="loading-icon" />
             </div>
             <button class="search-btn" search-toggler>
-                <img src="./images/search.png" width="24" height="24" alt="close search box"/>
+                <img src="./images/close.png" width="24" height="24" alt="close search box"/>
             </button>
         </div>
-        <div class="search-btn" search-toggler menu-close>
-            <img src="./images/menu-close.png" width="24" height="24" alt ="open-search box"/>
-        </div>
+        <button class="search-btn" search-toggler menu-close>
+            <img src="./images/search.png" width="24" height="24" alt ="open-search box"/>
+        </button>
 
         <button class="menu-btn" menu-btn menu-toggler>
             <img src="./images/menu.png" width="24" height="24" alt ="open_menu" class="menu"/>
-            <img src="./images/menu-close.png" width="24" height="24" alt ="close menu" class="close"/>
+            <img src="./images/menu-close.png" width="24" height="24" alt ="close-menu" class="close"/>
         </button> 
     </header>
 </body>
