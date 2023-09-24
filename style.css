@@ -135,8 +135,7 @@ body {
 
 .title{
     font-size:var(--fs-title);
-    font-weigth:var(--weight-bold);
-    letter-spacing:0.5px;
+    
 }
 
 .header {
@@ -314,4 +313,44 @@ section {
 .overlay.active{
     opacity: 0.5;
     pointer-events: all;
+}
+
+/*Banner*/
+.img-cover{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.heading{
+    color:var(--white);
+    font-size: var(--fs-heading);
+    font-weight: var(--weight-bold);
+    letter-spacing:0.5px;
+    line-height:3px;
+} 
+.title-large{
+    font-size: var(--fs-title-lg);
+    font-weight:var(--weight-bold);
+    letter-spacing:0.5px;
+}
+.heading,
+.title-large,
+.title {
+    font-weight: var(--weight-bold); 
+    letter-spacing: 0.5px;
+}
+.meta-item{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.btn{
+    color: var(--white);
+    font-size:var(--fs-button);
+    font-weight:var(--weight-bold);
+    max-width: max-content;
+    display: flex;
+    gap: 12px;
+    align-items:center;
+    padding-block:12px;
 }
