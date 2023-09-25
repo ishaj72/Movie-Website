@@ -6,9 +6,9 @@
     --white-alpha-20: hsla(0, 0%, 100%, 0.2); /*shade of grey*/
     --on-surface: hsla(250, 100%, 95%, 1); /*off white*/
     --on-surface-variant: hsla(250, 1%, 44%, 1); /*light grey*/
-    --primary: hsla(155, 78%, 33%, 0.30); /*nint green*/
+    --primary: hsla(155, 78%, 33%); /*mint green*/
     --primary-variant: hsla(219, 100%, 24%, 0.3); /*light greyish blue*/
-    --rating-color: hsla(30, 80%, 60%, 0.3); /*soft coral*/
+     /*use primary in place of surface*/
     --surface: hsla(250, 13%, 11%, 1); /*dark grey*/
     --text-color: hsla(250, 2%, 59%, 1); /*v. light grey*/
     --white: hsla(0, 0%, 100%, 1); /*white*/
@@ -162,7 +162,7 @@ section {
 }
 
 .search-btn {
-    background-color: var(--banner-background);
+    background-color: var(--primary);
     border-radius: var(--radius-8);
 }
 
@@ -210,7 +210,7 @@ section {
 }
 
 .search-field{
-    background-color: var(--banner-background);
+    background-color: var(--primary);
     height:48px;
     line-height:48px;
     padding-inline: 44px 16px;
@@ -355,6 +355,7 @@ section {
     font-weight: var(--weight-bold);
     display: flex;
     gap: 12px;
+    width:120px;
     align-items: center;
     padding-block: 12px;
     padding-inline: 20px 24px;
