@@ -512,7 +512,7 @@ section {
     margin-block-end:24px;
 }
 .slider-list{
-    margin-inline:-20px;
+    margin-inline: -20px;
     overflow-x:overlay;
     padding-block-end: 16px;
     margin-block-end: -16px;
