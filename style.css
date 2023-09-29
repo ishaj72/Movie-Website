@@ -220,7 +220,7 @@ section {
 }
 
 .search-field::placeholder{
-    color:var(--on-surface-variant);
+    color:var(--white);
 }
 
 .search-field:hover{
@@ -546,7 +546,7 @@ section {
     min-width:200px;
 }
 .movie-card .card-banner{
-    width:100px;
+    width:250px;
 }
 .movie-card .title{
     width:100%;
