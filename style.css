@@ -110,10 +110,8 @@ body {
 
 /*Header*/
 
-.search-wrapper::before {
-    position:absolute;
-    top:14px;
-    right:12px;
+.search-wrapper::before,
+.load-more:: before{
     content:"";
     width:20px;
     height:20px;
@@ -124,7 +122,27 @@ body {
     display:none;
 }
 
+.search-wrapper::before {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+}
+
 .search-wrapper.searching::before{
+    display:block;
+}
+
+.load-more{
+    background-color: var(--primary);
+    margin-inline: auto;
+    margin-block: 36px 60px;
+}
+
+.load-more :is(:hover, :focus-visible){
+    --primary: hsla(155, 78%, 33%);
+}
+
+.load-more.loading:before{
     display:block;
 }
 
@@ -380,7 +398,8 @@ section {
     z-index: 1;
 }
 
-.container::after {
+.container::after,
+.search-modal::after{
     content: "";
     position: fixed;
     bottom: 0;
@@ -625,5 +644,41 @@ section {
     flex-shrink:0;
     max-width:500px;
     width:calc(100% - 40px);
+}
 
+:is().genre-list, .search-modal) :is(.movie-card, .card-banner) {
+    width: 200%;
+}
+
+/*movie list page*/
+.genre-list .title-wrapper{ margin-block-end: 56px;}
+
+.grid-list{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+
+/*search modal*/
+.search-modal {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--surface);
+    padding: 50px 24px;
+    overflow-y: overlay;
+    z-index: 4;
+    dispaly:none;
+}
+
+.search-modal.active{display:block;}
+
+.search-modal .label{
+    color: var(--primary);
+    font-weight: var(--weight-bold);
+    margin-block-end: 8px;
 }
