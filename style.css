@@ -647,15 +647,18 @@ section {
 }
 
 :is().genre-list, .search-modal) :is(.movie-card, .card-banner) {
-    width: 200%;
+    width: 100%;
+   
 }
 
 /*movie list page*/
-.genre-list .title-wrapper{ margin-block-end: 56px;}
+.genre-list .title-wrapper {
+    margin-block-end: 56px;
+}
 
 .grid-list{
     display:grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(500px,1fr));
     column-gap: 16px;
     row-gap: 20px;
 }
@@ -663,16 +666,16 @@ section {
 
 /*search modal*/
 .search-modal {
-    position: fixed;
+    position: relative;
     top: 96px;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: var(--surface);
+    background-color: var(--background);
     padding: 50px 24px;
     overflow-y: overlay;
     z-index: 4;
-    dispaly:none;
+    display:none;
 }
 
 .search-modal.active{display:block;}
