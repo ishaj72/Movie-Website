@@ -15,7 +15,7 @@ export function sidebar() {
     const sidebarInner = document.createElement("div");
     sidebarInner.classList.add("sidebar-inner");
 
-    sidebarInner.innerHTML = html`
+    sidebarInner.innerHTML = `
         <div class="sidebar-list">
                 <p class="title">Genre</p>
         </div>
@@ -42,11 +42,31 @@ export function sidebar() {
             //link.setAttribute("onclick", `getMovieList(with_genres=$
             //{genreId}", "$ {genreNmae}")`)
             link.textContent = genreNmae;
-            sidebarInner.querySelectorAll("sidebar-list")[0]
+            sidebarInner.querySelectorAll(".sidebar-list")[0]
                 .appendChild(link);
 
         }
-        
+        const sidebar = document.querySelector("[sidebar]");
+        sidebar.appendChild(sidebarInner);
+        toggleSidebar(sidebar);
     }
+    const toggleSidebar = function (sidebar) {
+        const sidebarBtn = deocument.querySelector("[menu-btn]");
+        const sideTogglers = document.querySelectorAll("[menu-toggler]");
+        const sidebarClose = document.querySelectorAll("[menu-close]");
+        const overlay = document.querySelector("[overlay]");
 
+        addEventOneElements(sidebarTogglers, "click", function () {
+            sidebar.classList.toggle("active");
+            sidebarBtn.classList.toggle("active");
+            overlay.classList.toggle("active");
+        });
+
+        addEventOneElements(sidebarClose, "click", function () {
+            sidebar.classList.remove("active");
+            sidebarBtn.classList.remove ("active");
+            overlay.classList.remove("active");
+        });
+
+    }
 }

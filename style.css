@@ -281,6 +281,7 @@ section {
 .sidebar.active{
     transform: translateX(340px);
     visibility: visible;
+    background-color: var(--banner-background);
 }
 
 .sidebar-inner{
